@@ -29,6 +29,11 @@ def minOperations(n: int) -> int:
     Return:
         int: tries
     """
+    if n == 0:
+        return 0
+    if n == 1:
+        return 2
+
     count: int = 0
     num: int = 2
     if _is_prime(n):
