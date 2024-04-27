@@ -2,7 +2,7 @@
 """0. Minimum Operations"""
 
 
-def _is_prime(n: int) -> bool:
+def _is_prime(n):
     """Checks if a given number is a prime number
 
     Param:
@@ -18,7 +18,7 @@ def _is_prime(n: int) -> bool:
     return True
 
 
-def minOperations(n: int) -> int:
+def minOperations(n):
     """calculates the fewest number of operations.
 
     Given a number n, calculates the
@@ -29,13 +29,11 @@ def minOperations(n: int) -> int:
     Return:
         int: tries
     """
-    if n == 0:
-        return 0
     if n == 1:
         return 2
 
-    count: int = 0
-    num: int = 2
+    count = 0
+    num = 2
     if _is_prime(n):
         return 0
     while n != 0:
