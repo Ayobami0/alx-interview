@@ -30,7 +30,7 @@ def minOperations(n):
         int: tries
     """
     if n == 1:
-        return 2
+        return 0
 
     count = 0
     num = 2
