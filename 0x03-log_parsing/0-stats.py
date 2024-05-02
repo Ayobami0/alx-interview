@@ -32,7 +32,6 @@ def _print_stats():
 
 def _handler(signum, frame):
     _print_stats()
-    raise KeyboardInterrupt
 
 
 signal.signal(signal.SIGINT, _handler)
