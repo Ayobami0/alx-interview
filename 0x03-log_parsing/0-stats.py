@@ -15,10 +15,9 @@ _store = {
     500: 0,
 }
 _total_size = 0
-_reg = re.compile(
-    r'^(\d|.*)\s-\s\[(.*)\]\s"GET\s\/'
-    + r'projects\/260\sHTTP\/1.1"\s(\d{3})\s(\d{1,4})'
-)
+_p1 = r'^(\d|.*)\s-\s\[(.*)\]\s"GET\s\/'
+_p2 = r'projects\/260\sHTTP\/1.1"\s(\d{3})\s(\d{1,4})'
+_reg = re.compile(_p1 + _p2)
 _counter = 0
 
 
@@ -33,6 +32,7 @@ def _print_stats():
 
 def _handler(signum, frame):
     _print_stats()
+    raise KeyboardInterrupt
 
 
 signal.signal(signal.SIGINT, _handler)
