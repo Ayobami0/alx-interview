@@ -26,7 +26,9 @@ _counter = 0
 def _print_stats():
     print(
         "File size: {}".format(_total_size),
-        "\n".join(["{}: {}".format(k, v) for k, v in _store.items()]),
+        "\n".join(
+            ["{}: {}".format(k, v) for k, v in _store.items() if v != 0],
+        ),
         sep="\n",
         flush=True,
     )
