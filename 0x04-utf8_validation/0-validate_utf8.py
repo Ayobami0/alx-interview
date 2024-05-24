@@ -4,6 +4,7 @@
 
 def validUTF8(data):
     for v in data:
+        print(bin(v), bin(v & 0xFF))
         if (v >> 8) != 0:
-            return False
+            ...
     return True
