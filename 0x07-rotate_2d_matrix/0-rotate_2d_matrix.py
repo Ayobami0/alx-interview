@@ -13,11 +13,7 @@ def rotate_2d_matrix(matrix):
     [9, 6, 2]
     [8, 7, 4]
     """
-    num = len(matrix)
-    for x in range(0, int(num / 2)):
-        for y in range(x, num-x-1):
-            temp = matrix[x][y]
-            matrix[x][y] = matrix[y][num-1-x]
-            matrix[y][num-1-x] = matrix[num-1-x][num-1-y]
-            matrix[num-1-x][num-1-y] = matrix[num-1-y][x]
-            matrix[num-1-y][x] = temp
+    for i in range(matrix):
+        for j in range(matrix):
+            tmp = matrix[i][j]
+            matrix[i][]
