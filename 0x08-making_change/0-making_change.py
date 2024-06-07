@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 
-def makeChange(coins: list, total: int):
+def makeChange(coins, total):
     """
     Uses greedy algorithm to get the optimum number of coins to make
     a change
