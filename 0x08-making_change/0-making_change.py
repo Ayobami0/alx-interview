@@ -10,17 +10,15 @@ def makeChange(coins, total):
         return 0
 
     count = 0
-    i = 0
     coins.sort(reverse=True)
 
-    while i < len(coins):
-        while coins[i] <= total:
-            total = total - coins[i]
+    for coin in coins:
+        while coin <= total:
+            total = total - coin
             count += 1
 
         if total == 0:
             break
-        i += 1
 
     if total == 0:
         return count
