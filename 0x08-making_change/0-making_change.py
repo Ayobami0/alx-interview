@@ -8,10 +8,10 @@ def makeChange(coins: list, total: int):
     """
     if total <= 0:
         return 0
-    count = 0
 
-    coins.sort(reverse=True)
+    count = 0
     i = 0
+    coins.sort(reverse=True)
 
     while i < len(coins):
         while coins[i] <= total:
@@ -22,4 +22,6 @@ def makeChange(coins: list, total: int):
             break
         i += 1
 
-    return count if total == 0 else -1
+    if total == 0:
+        return count
+    return -1
