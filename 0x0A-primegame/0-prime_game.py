@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""Prime game"""
 
 
 def _primes(n):
+    """Get list of primes"""
     nums = [True for _ in range(n+1)]
     p = 2
     while p <= n:
@@ -15,6 +17,7 @@ def _primes(n):
 
 
 def isWinner(x, nums):
+    """Get winner."""
     wins = {'Ben': 0, 'Maria': 0}
     for i in range(x):
         turn = False
