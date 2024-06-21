@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
-def primes(n):
+
+def _primes(n):
     nums = [True for _ in range(n+1)]
     p = 2
     while p <= n:
@@ -18,7 +19,7 @@ def isWinner(x, nums):
     for i in range(x):
         turn = False
         n = nums[i]
-        p = primes(n)[2:]
+        p = _primes(n)[2:]
         for i, v in enumerate(p, 2):
             if v:
                 turn = not turn
@@ -27,7 +28,6 @@ def isWinner(x, nums):
             wins['Maria'] += 1
         else:
             wins['Ben'] += 1
-
+    if wins['Ben'] == wins['Maria']:
+        return None
     return 'Ben' if wins['Ben'] > wins['Maria'] else 'Maria'
-
-print("Winner: {}".format(isWinner(5, [2, 5, 1, 4, 3])))

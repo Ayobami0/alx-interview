@@ -1,1 +1,1 @@
-# Prime Number Game
+# Prime numbers game
